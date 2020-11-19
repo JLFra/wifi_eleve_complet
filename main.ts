@@ -2,11 +2,12 @@
 //% color="#037268" icon="\uf1eb"
 namespace wifi {
     let port = '2000'
-    //% block="Connexion au point d'accès SSID $SSID mot de passe $password adresse IP $adresse_IP Rx $Rx Tx $Tx"
+    //% block="Connexion au point d'accès SSID $SSID mot de passe $password adresse IP $adresse_IP || Rx $Rx Tx $Tx"
     //% group='Commun'
     //% SSID.defl='SNT1' password.defl='12345678'
     //% adresse_IP.defl='192.168.0.5'
     //% Rx.defl=SerialPin.P0 Tx.defl=SerialPin.P14
+    //% expandableArgumentMode="enabled"
     export function connect_AP_IP(SSID: string, password: string, adresse_IP: string, Rx: SerialPin, Tx: SerialPin): void {
         basic.showIcon(IconNames.Asleep)
         basic.pause(2000)
